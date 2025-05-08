@@ -13,7 +13,7 @@ O **Google Gemini** é uma poderosa API desenvolvida pela Google para gerar cont
 - **Node.js**: Plataforma para desenvolvimento de aplicações de backend.
 - **Google Gemini API**: Plataforma de IA generativa do Google para criação de chatbots inteligentes e ferramentas baseadas em IA.
 - **dotenv**: Para carregar variáveis de ambiente de forma segura.
-- **Express** (se necessário para rotas): Framework minimalista para servidor web em Node.js.
+- **Express**: Framework minimalista para servidor web em Node.js.
   
 ### 💡 Como Funciona
 
@@ -26,3 +26,32 @@ Siga os passos abaixo para rodar a aplicação localmente:
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/gabrielimartins7/gemini-node
+   
+2. **Instale as dependências:**:
+   ```bash
+   npm install
+
+3. **Configuração do .env:**:
+   ```bash
+   API_KEY=Sua_Chave_API_Aqui
+
+4. Inicie o servidor:
+   ```bash
+   node index.js
+
+5. Interaja com a IA:<br>
+   Agora, o servidor estará rodando. Você pode interagir com o chatbot e obter respostas geradas pela IA do Google Gemini!
+
+   ---
+
+  🎯 Objetivos de Aprendizado
+  - Entender os conceitos de inteligência artificial generativa.
+
+  - Integrar o Google Gemini com um backend Node.js.
+
+  - Construir aplicações interativas utilizando a API do Google Gemini.
+
+  - Trabalhar com variáveis de ambiente para garantir a segurança das chaves de API.
+   
+
+   
