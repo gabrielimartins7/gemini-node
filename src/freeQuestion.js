@@ -14,11 +14,28 @@ export async function freeQuestion() {
     { text: "output:" }
   ];
 
-  const result = await model.generateContent({
+  const request = {
     contents: [{ role: "user", parts }]
-  });
+  };
+
+  const result = await model.generateContent(request);
+
+  const totalInputToken = await model.countTokens(request);
+  console.log(`\nTotal tokens de entrada: ${totalInputToken.totalTokens}\n`);
 
   const response = await result.response;
   const text = await response.text();
   console.log(text);
+
+  const outputRequest = {
+    contents: [
+      {
+        role: "model",
+        parts: [{ text }]
+      }
+    ]
+  };
+
+  const totalOutToken = await model.countTokens(outputRequest);
+  console.log(`\nTotal tokens de saída: ${totalOutToken.totalTokens}\n`);
 }
